@@ -125,26 +125,29 @@ hr {
   }
   ?>
 
-<h2 align="center">Daftar Sebagai Peserta</h2>
+<h2 align="center">Daftar Peserta Baru</h2>
 
-<p align="center"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>
+<p align="center"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Daftar</button></p>
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form class="modal-content" action="/TugasAkhir/action_page.php" method="post" >
     <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
+      <h1>Daftar Peserta Baru</h1>
+      <p>Mohon form peserta diisi secara lengkap.</p>
       <hr>
 
+      <label for="id_petugas"><b>ID Petugas</b></label>
+      <input type="text" placeholder="masukan ID petugas yang terdaftar" name="id_petugas" required>
+
       <label for="NIK"><b>NIK</b></label>
-      <input type="text" placeholder="Enter NIK" name="NIK" required>
+      <input type="text" placeholder="masukan NIK" name="NIK" required>
 
       <label for="nama"><b>Nama</b></label>
-      <input type="text" placeholder="Enter Nama" name="nama" required>
+      <input type="text" placeholder="masukan Nama" name="nama" required>
 
       <label for="alamat"><b>Alamat</b></label>
-      <input type="text" placeholder="Enter Alamat" name="alamat" required>
+      <input type="text" placeholder="masukan Alamat" name="alamat" required>
 
       <label for="agama"><b>Agama</b></label></br>
       <select name="agama">
@@ -177,8 +180,8 @@ hr {
       </select></br></br>
     
       <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" name="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Batal</button>
+        <button type="submit" name="submit" class="signupbtn">Daftar</button>
       </div>
     </div>
   </form>
@@ -186,24 +189,28 @@ hr {
 
   <form class="modal-content" action="cek_login.php" method="post">
     <div class="container">
-      <h1 align="center">Login Peserta</h1>
+      <h1 align="center">Data Peserta</h1>
       <hr>
 
+      <label for="ID Petugas"><b>ID Petugas</b></label>
+      <input type="text" placeholder="masukan ID Petugas yang terdaftar" name="id_petugas" required>
+
       <label for="NIK"><b>NIK</b></label>
-      <input type="text" placeholder="Enter NIK" name="NIK" required>
+      <input type="text" placeholder="masukan NIK" name="NIK" required>
 
       <label for="nama"><b>Nama</b></label>
-      <input type="text" placeholder="Enter Nama" name="nama" required>
+      <input type="text" placeholder="masukan Nama" name="nama" required>
 
       <div class="clearfix">
-        <button type="reset" class="cancelbtn">Reset</button>
-        <button type="submit" name="submit" class="signupbtn">Login</button>
+        <button type="reset" class="cancelbtn">Hapus</button>
+        <button type="submit" name="submit" class="signupbtn">Masuk</button>
       </div>
     </div>
   </form>
 </div>
 
 <script>
+
 // Get the modal
 var modal = document.getElementById('id01');
 
